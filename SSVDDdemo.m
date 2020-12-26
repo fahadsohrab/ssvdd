@@ -24,7 +24,7 @@ Testdata= rand(D,noOfTestData); %Testing Data/Features from modality 1
 %other options (input arguments) include
 % 'maxIter' :Maximim iteraions, Default=100
 % 'C'       :Value of hyperparameter C, Default=0.1
-% 'd'       :data in lower dimension, make sure that input d<D, Default=1,
+% 'd'       :data in lower dimension, make sure that input d<D, Default=1
 % 'eta'     :Used as step size for gradient, Default=0.1
 % 'psi'     :regularization term, Default=1 i.e., No regularization term
 %           :Other options for psi are 2,3,4 (Please refer to paper for more details)
