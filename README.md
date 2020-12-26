@@ -1,6 +1,7 @@
 # Subspace Support Vector Data Description
 
-This repository is for Subspace Support Vector Data Description (S-SVDD). The codes are provided as .m (matlab) files to be executed in matlab. The codes are provided without any warranty or gurantee. 
+This repository is for Subspace Support Vector Data Description (S-SVDD). The codes are provided as .m (matlab) files to be executed in matlab. The codes are provided without any warranty or gurantee. Download all the files from here
+[HERE](https://github.com/fahadsohrab/ssvdd/archive/main.zip), unzip and add the folder ssvdd-main to the path in matlab. see demo.m for exmaple usage.
 ```text
 Possible inputs to ssvddtrain()
 The first input argument is Training data
@@ -20,7 +21,7 @@ ssvddmodel=ssvddtrain(Traindata,'C',0.12,'d',2,'eta',0.02,'psi',3);
 [predicted_labels,accuracy,sensitivity,specificity]=ssvddtest(Testdata,testlabels,ssvddmodel); 
 ```
 
-see demo.m for example usage of the code. Please contact fahad.sohrab@tuni.fi for any issues.
+Please contact fahad.sohrab@tuni.fi for any issues.
 
 # Citation
 Please consider citing the following paper.
