@@ -1,5 +1,5 @@
 function Q = initialize_Q(D,d)
-%This fucntion is for initializing the projection matrix Q for "Multimodal subspace support vector data description"
+%This fucntion is for initializing the projection matrix Q for "subspace support vector data description"
 % Input: D = Original dimensinality of the data
 %        d = dimensinality of the data in lower d-dimensional subspace
 % Output:Q = initialized Projection matrix
