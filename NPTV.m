@@ -1,4 +1,4 @@
- function [Phi,Phi_t,KforKnn] = NPTV(M_train,M_test,kappa)
+ function [Phi,Phi_t] = NPTV(M_train,M_test,kappa)
 % This fucntion implements NON-Linear Projection Trick (NPT)
 % Input:  M_train = Train data
 %         M_test = Test data
@@ -14,7 +14,6 @@ Dtest = ((sum(M_train'.^2,2)*ones(1,NN))+(sum(M_test'.^2,2)*ones(1,N))'-(2*(M_tr
 
 sigma2 = kappa * mean(mean(Dtrain));  A = 2.0 * sigma2;
 Ktrain = exp(-Dtrain/A);  		      Ktest = exp(-Dtest/A);
-KforKnn=Ktrain;
 % % center_kernel_matrices
 % % % function [Ktrain,Ktest] = center_kernel_matrices(Ktrain,Ktest)
 N = size(Ktrain,2);  M = size(Ktest,2);
