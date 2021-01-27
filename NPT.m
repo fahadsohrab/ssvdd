@@ -1,4 +1,4 @@
-function [Phi,Phi_t] = NPTV(M_train,M_test,kappa)
+function [Phi,Phi_t] = NPT(M_train,M_test,kappa)
 % This fucntion implements NON-Linear Projection Trick (NPT)
 % Input:  M_train = Train data
 %         M_test = Test data
