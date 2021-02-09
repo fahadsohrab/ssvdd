@@ -90,9 +90,8 @@ for ii=1:maxIter
     end
     const= constraintssvdd(consType,Cval,Q,Traindata,Alphavector);
     %compute the gradient and update the matrix Q
-    Sum1_data = Traindata*diag(Alphavector)*Traindata';
-    Sum2_data = Traindata*(Alphavector*Alphavector')*Traindata';
-    Grad = (2*Q * (Sum1_data-Sum2_data))+ (Bta*const);
+    Sa = Traindata*(diag(Alphavector) - Alphavector*Alphavector')*Traindata';
+    Grad=(2*Q*Sa)+(Bta*const);
     Q = Q - eta*Grad;
     %orthogonalize and normalize Q1
     Q = OandN_Q(Q);
