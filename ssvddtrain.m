@@ -65,7 +65,7 @@ if npt==1
     [U,S] = eig(Ktrain);        s = diag(S);
     s(s<10^-6) = 0.0;
     [U, s] = sortEigVecs(U,s);  s_acc = cumsum(s)/sum(s);   S = diag(s);
-    II = find(s_acc>=0.999);
+    II = find(s_acc>=0.99);
     LL = II(1);
     Pmat = pinv(( S(1:LL,1:LL)^(0.5) * U(:,1:LL)' )');
     %Phi
