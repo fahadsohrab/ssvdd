@@ -10,14 +10,14 @@ addpath('ssvdd-main');
 %%Generate Random Data
 noOfTrainData = 500; noOfTestData = 100;
 D= 5; %Original dimentionality of data
-Traindata = rand(D,noOfTrainData); %Training Data/Features
+Traindata = rand(D,noOfTrainData); %Generate training data
 %Training labels (all +1s) are not needed.
 
 testlabels = -ones(noOfTestData,1);
 perm = randperm(noOfTestData);
 positiveSamples = floor(noOfTestData/2);
 testlabels(perm(1:positiveSamples))=1; % test labels, +1 for target, -1 for outliers
-Testdata= rand(D,noOfTestData); %Testing Data/Features from modality 1
+Testdata= rand(D,noOfTestData); %Generate testing data
 
 %Possible inputs to ssvddtrain
 % The first input argument is Training data
