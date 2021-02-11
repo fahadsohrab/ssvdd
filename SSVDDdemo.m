@@ -28,6 +28,8 @@ Testdata= rand(D,noOfTestData); %Generate testing data
 % 'psi'     :regularization term, Default=1 i.e., No regularization term
 %           :Other options for psi are 2,3,4 (Please refer to paper for more details)
 % 'B'       :Default=0.1, Controling the importance of regularization term
+% 'npt'     :1 for Non-linear Projection Trick (NPT)-based non-linear Subspace-SVDD (Default=0, linear)
+%  's'       :Hyperparameter for the kernel inside NPT (Default=0.001). 
 
 ssvddmodel=ssvddtrain(Traindata,'C',0.1,'d',4,'eta',0.02,'psi',4,'B',0.001);
 [predicted_labels,accuracy,sensitivity,specificity]=ssvddtest(Testdata,testlabels,ssvddmodel);
