@@ -26,7 +26,7 @@ ssvddmodel=ssvddtrain(Traindata,'C',0.12,'d',2,'eta',0.02,'psi',3,'npt',1,'s',0.
 Please contact fahad.sohrab@tuni.fi for any issues.
 
 # Citation
-If you use any part of this repository in implementation of S-SVDD or other relavent One-class classification method(s) built on top on S-SVDD, consider citing the following paper.
+If you use any part of this repository in your implementation, consider citing the following paper.
 
 @inproceedings{sohrab2018subspace,
   title={Subspace support vector data description},
