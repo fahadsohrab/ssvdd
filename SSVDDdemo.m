@@ -1,6 +1,4 @@
 % This is a sample demo code for Subspace Support Vector Data Description
-% The demo code is provided for Linear case S-SVDD
-% For non-linear cases, first apply NPT.m over the data and then use the output Phi and Phi_t as train and test data in ssvddtrain() and ssvddtest() 
 % Please contact fahad.sohrab@tuni.fi for any errors/bugs
 clc
 close all
