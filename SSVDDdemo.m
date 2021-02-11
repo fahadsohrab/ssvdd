@@ -6,6 +6,7 @@ clc
 close all
 clear
 
+addpath('ssvdd-main');
 %%Generate Random Data
 noOfTrainData = 500; noOfTestData = 100;
 D= 5; %Original dimentionality of data
