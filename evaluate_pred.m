@@ -1,4 +1,4 @@
- function EVAL = evaluate_pred(ACTUAL,PREDICTED)
+ function EVAL = evaluate_preds(ACTUAL,PREDICTED)
 % This fucntion evaluates the performance of a SSVDD model by 
 % calculating the common performance measures: Accuracy, tp_rate, 
 % Precision, F-Measure, G-mean.
