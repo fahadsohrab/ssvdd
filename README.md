@@ -23,7 +23,7 @@ ssvddmodel=ssvddtrain(Traindata,'C',0.12,'d',2,'eta',0.02,'psi',3,'npt',1,'s',0.
 [predicted_labels,accuracy,sensitivity,specificity]=ssvddtest(Testdata,testlabels,ssvddmodel); 
 ```
 
-Please contact fahad.sohrab@tuni.fi for any issues.
+
 
 # Citation
 If you use any part of this repository in your implementation, consider citing the following paper.
@@ -37,3 +37,5 @@ If you use any part of this repository in your implementation, consider citing t
   organization={IEEE}
 }
 ```
+# Contact
+Please contact fahad.sohrab@tuni.fi for any issues.
