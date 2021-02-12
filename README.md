@@ -27,7 +27,7 @@ Please contact fahad.sohrab@tuni.fi for any issues.
 
 # Citation
 If you use any part of this repository in your implementation, consider citing the following paper.
-
+```text
 @inproceedings{sohrab2018subspace,
   title={Subspace support vector data description},
   author={Sohrab, Fahad and Raitoharju, Jenni and Gabbouj, Moncef and Iosifidis, Alexandros},
@@ -36,3 +36,4 @@ If you use any part of this repository in your implementation, consider citing t
   year={2018},
   organization={IEEE}
 }
+```
