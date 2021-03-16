@@ -58,10 +58,10 @@ if npt==1
     N = size(Traindata,2);
     Dtrain = ((sum(Traindata'.^2,2)*ones(1,N))+(sum(Traindata'.^2,2)*ones(1,N))'-(2*(Traindata'*Traindata)));
     sigma = kappa * mean(mean(Dtrain));  A = 2.0 * sigma;
-    Ktrain = exp(-Dtrain/A);
+    Ktrain_exp = exp(-Dtrain/A);
     %center_kernel_matrices
-    N = size(Ktrain,2);
-    Ktrain = (eye(N,N)-ones(N,N)/N) * Ktrain * (eye(N,N)-ones(N,N)/N);
+    N = size(Ktrain_exp,2);
+    Ktrain = (eye(N,N)-ones(N,N)/N) * Ktrain_exp * (eye(N,N)-ones(N,N)/N);
     [U,S] = eig(Ktrain);        s = diag(S);
     s(s<10^-6) = 0.0;
     [U, s] = sortEigVecs(U,s);  s_acc = cumsum(s)/sum(s);   S = diag(s);
@@ -71,7 +71,7 @@ if npt==1
     %Phi
     Phi = Pmat*Ktrain;
     %Saving useful variables for non-linear testing
-    npt_data={1,A,Ktrain,Phi,Traindata};%1,A,Ktrain,Phi,Traindata (1 is for flag)
+    npt_data={1,A,Ktrain_exp,Phi,Traindata};%1,A,Ktrain,Phi,Traindata (1 is for flag)
     Traindata=Phi;
 else
     disp('Linear S-SVDD running...')
