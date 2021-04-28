@@ -14,7 +14,7 @@ elseif consType==3
     const= (2*Q*(Traindata*(Alphavector*Alphavector')*Traindata'));
 elseif consType==4
   Alphavector_C=Alphavector;
-  Alphavector_C(Alphavector_C==Cval)=0; %constraint C3 
+  Alphavector_C(Alphavector_C==Cval)=0;
  const= (2*Q*(Traindata*(Alphavector_C*Alphavector_C')*Traindata'));
 else
        disp('Only psi 1,2,3 or 4 is possible')
